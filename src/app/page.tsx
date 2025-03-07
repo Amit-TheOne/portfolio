@@ -3,6 +3,7 @@ import { Navbar } from "@/sections/Navbar";
 import { Projects } from "@/sections/Projects";
 import { Skills } from "@/sections/Skills";
 import { About } from "@/sections/About";
+import { Contact } from "@/sections/Contact";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <About />
       <Projects />
       <Skills />
+      <Contact />
     </div>
   );
 }
