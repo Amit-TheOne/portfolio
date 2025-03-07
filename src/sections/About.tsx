@@ -4,7 +4,7 @@ import { CardHeader } from "@/components/CardHeader";
 import Image from "next/image";
 import avatarHi from "@/assets/images/avatar-hi.png";
 import { BeyondCode } from "@/components/BeyondCode";
-
+import { experineceData } from "@/data/experienceData";
 
 export const About = () => {
     return (
@@ -53,22 +53,12 @@ export const About = () => {
                                 className="px-6 py-6 tracking-wider"
                             />
                             <div className="px-10 md:px-20 py-8 -mt-10 lg:-mt-6 text-white text-base md:text-lg space-y-3 font-semibold">
-                                <p>
-                                    <span>1.5+ yrs - </span>
-                                    <span>Full Stack Development</span>
-                                </p>
-                                <p>
-                                    <span>2.5+ yrs - </span>
-                                    <span>Frontend Devlopment</span>
-                                </p>
-                                <p>
-                                    <span>1.5+ yrs - </span>
-                                    <span>Backend Devlopment</span>
-                                </p>
-                                <p>
-                                    <span>2+ yrs - </span>
-                                    <span>Tech Community</span>
-                                </p>
+                                {experineceData.map((exp) => (
+                                    <p key={exp.role}>
+                                        <span>{exp.experience} - </span>
+                                        <span>{exp.role}</span>
+                                    </p>
+                                ))}
                             </div>
                         </Card>
 
