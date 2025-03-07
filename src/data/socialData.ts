@@ -1,9 +1,9 @@
-import LinkedInIcon from "@/assets/icons/linkedin.svg";
-import TwitterIcon from "@/assets/icons/twitter.svg";
-import InstagramIcon from "@/assets/icons/instagram.svg";
-import GithubIcon from "@/assets/icons/github.svg";
-import BentoIcon from "@/assets/icons/bento.svg";
-import EmailIcon from "@/assets/icons/email.svg";
+import LinkedInIcon from "@/assets/icons/social-icons/linkedin.svg";
+import TwitterIcon from "@/assets/icons/social-icons/twitter.svg";
+import InstagramIcon from "@/assets/icons/social-icons/instagram.svg";
+import GithubIcon from "@/assets/icons/tech-icons/github.svg";
+import BentoIcon from "@/assets/icons/social-icons/bento.svg";
+import EmailIcon from "@/assets/icons/social-icons/email.svg";
 
 export const socialData = [
     {
