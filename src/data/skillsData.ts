@@ -1,9 +1,32 @@
-import JavascriptIcon from "@/assets/icons/square-js.svg";
-import HTMLIcon from "@/assets/icons/html5.svg";
-import CssIcon from "@/assets/icons/css3.svg";
-import ReactIcon from "@/assets/icons/react.svg";
-import ChromeIcon from "@/assets/icons/chrome.svg";
-import GithubIcon from "@/assets/icons/github.svg";
+import HTMLIcon from "@/assets/icons/tech-icons/html5.svg";
+import CssIcon from "@/assets/icons/tech-icons/css3.svg";
+import JavascriptIcon from "@/assets/icons/tech-icons/javascript.svg";
+import ReactIcon from "@/assets/icons/tech-icons/react.svg";
+import ChromeIcon from "@/assets/icons/tech-icons/chrome.svg";
+import GithubIcon from "@/assets/icons/tech-icons/github.svg";
+import NodeIcon from "@/assets/icons/tech-icons/node.svg";
+import ExpressIcon from "@/assets/icons/tech-icons/express.svg";
+import BootstrapIcon from "@/assets/icons/tech-icons/bootstrap.svg";
+import ReduxIcon from "@/assets/icons/tech-icons/redux.svg";
+import JavaIcon from "@/assets/icons/tech-icons/java.svg";
+import PythonIcon from "@/assets/icons/tech-icons/python.svg";
+import GoIcon from "@/assets/icons/tech-icons/go.svg";
+import AWSIcon from "@/assets/icons/tech-icons/aws.svg";
+import GoogleCloudIcon from "@/assets/icons/tech-icons/google-cloud.svg";
+import MongoDBIcon from "@/assets/icons/tech-icons/mongodb.svg";
+import PostgreSQLIcon from "@/assets/icons/tech-icons/postgres.svg";
+import PrismaIcon from "@/assets/icons/tech-icons/prisma.svg";
+import MySQLIcon from "@/assets/icons/tech-icons/mysql.svg";
+import FastAPIIcon from "@/assets/icons/tech-icons/fastapi.svg";
+import GitIcon from "@/assets/icons/tech-icons/git.svg";
+import CanvaIcon from "@/assets/icons/tech-icons/canva.svg";
+import FigmaIcon from "@/assets/icons/tech-icons/figma.svg";
+import WindowsIcon from "@/assets/icons/tech-icons/windows.svg";
+import DockerIcon from "@/assets/icons/tech-icons/docker.svg";
+import TypescriptIcon from "@/assets/icons/tech-icons/typescript.svg";
+import TailwindIcon from "@/assets/icons/tech-icons/tailwind.svg";
+import FirebaseIcon from "@/assets/icons/tech-icons/firebase.svg";
+
 
 export const skillsData = [
     {
@@ -24,23 +47,23 @@ export const skillsData = [
     },
     {
         title: "TypeScript",
-        iconType: ReactIcon,
+        iconType: TypescriptIcon,
     },
     {
         title: "Tailwind CSS",
-        iconType: ReactIcon,
+        iconType: TailwindIcon,
     },
     {
         title: "Node",
-        iconType: ReactIcon,
+        iconType: NodeIcon,
     },
     {
         title: "Express",
-        iconType: ReactIcon,
+        iconType: ExpressIcon,
     },
     {
         title: "Bootstrap",
-        iconType: ReactIcon,
+        iconType: BootstrapIcon,
     },
     {
         title: "Context API",
@@ -48,51 +71,55 @@ export const skillsData = [
     },
     {
         title: "Redux",
-        iconType: ReactIcon,
+        iconType: ReduxIcon,
+    },
+    {
+        title: "Firebase",
+        iconType: FirebaseIcon,
     },
     {
         title: "Java",
-        iconType: ReactIcon,
+        iconType: JavaIcon,
     },
     {
         title: "Python",
-        iconType: ReactIcon,
+        iconType: PythonIcon,
     },
     {
         title: "Go",
-        iconType: ReactIcon,
+        iconType: GoIcon,
     },
     {
         title: "AWS",
-        iconType: ReactIcon,
+        iconType: AWSIcon,
     },
     {
         title: "Google Cloud",
-        iconType: ReactIcon,
+        iconType: GoogleCloudIcon,
     },
     {
         title: "MongoDB",
-        iconType: ReactIcon,
+        iconType: MongoDBIcon,
     },
     {
         title: "PostgreSQL",
-        iconType: ReactIcon,
+        iconType: PostgreSQLIcon,
     },
     {
         title: "Prisma",
-        iconType: ReactIcon,
+        iconType: PrismaIcon,
     },
     {
         title: "MySQL",
-        iconType: ReactIcon,
+        iconType: MySQLIcon,
     },
     {
         title: "FastAPI",
-        iconType: ReactIcon,
+        iconType: FastAPIIcon,
     },
     {
         title: "Git",
-        iconType: ReactIcon,
+        iconType: GitIcon,
     },
     {
         title: "Github",
@@ -100,15 +127,15 @@ export const skillsData = [
     },
     {
         title: "Canva",
-        iconType: ReactIcon,
+        iconType: CanvaIcon,
     },
     {
         title: "Figma",
-        iconType: ReactIcon,
+        iconType: FigmaIcon,
     },
     {
         title: "Windows",
-        iconType: ReactIcon,
+        iconType: WindowsIcon,
     },
     {
         title: "Rest API",
@@ -120,7 +147,7 @@ export const skillsData = [
     },
     {
         title: "Docker",
-        iconType: ReactIcon,
+        iconType: DockerIcon,
     },
     {
         title: "Chrome Dev Tools",
