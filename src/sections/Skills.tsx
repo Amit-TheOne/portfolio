@@ -13,7 +13,7 @@ export const Skills = () => {
                 />
             </div>
 
-            <div className="mt-14 md:mt-20 w-[87%] md:w-[80%] mx-auto">
+            <div className="mt-14 md:mt-20 w-[87%] md:w-[85%] lg:max-w-7xl mx-auto">
                 <div className="flex flex-col gap-14 overflow-x-clip px-3">
                     <SkillItems
                         skillItems={skillsData}
