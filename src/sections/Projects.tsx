@@ -9,8 +9,8 @@ export const Projects = () => {
         <section className="py-12 md:py-16 lg:py-24">
             <div className="container">
                 <SectionHeader
-                    eyebrow="Real-world Results"
-                    title="Featured Projects"
+                    eyebrow="Explore my Work"
+                    title="Projects"
                     description="See how I transformed concepts into engaging experiences."
                 />
 
@@ -35,8 +35,9 @@ export const Projects = () => {
                                         <a
                                             href={project.previewLink}
                                             target="_blank"
+                                            rel="noopener noreferrer"
                                         >
-                                            <button className="bg-white text-gray-950 h-10 md:h-12 w-full md:w-auto px-8 rounded-xl font-semibold inline-flex justify-center items-center gap-3">
+                                            <button className="bg-white text-gray-950 border border-white h-10 md:h-12 w-full md:w-auto px-8 rounded-xl font-semibold inline-flex justify-center items-center gap-3 hover:bg-gray-500 hover:text-white hover:border-gray-500 transition-all duration-[600ms]">
                                                 <span>View Project</span>
                                                 <ArrowUpRightIcon className="size-4" />
                                             </button>
@@ -44,26 +45,27 @@ export const Projects = () => {
                                         <a
                                             href={project.repoLink}
                                             target="_blank"
+                                            rel="noopener noreferrer"
                                         >
-                                            <button className="bg-white text-gray-950 h-10 md:h-12 w-full md:w-auto px-8 rounded-xl font-semibold inline-flex justify-center items-center gap-3">
-                                                <span>View Repo</span>
+                                            <button className="bg-white text-gray-950 border border-white h-10 md:h-12 w-full md:w-auto px-8 rounded-xl font-semibold inline-flex justify-center items-center gap-3 hover:bg-gray-500 hover:text-white hover:border-gray-500 transition-all duration-[600ms]">
+                                                <span>View Code</span>
                                                 <ArrowUpRightIcon className="size-4" />
                                             </button>
                                         </a>
                                     </div>
-                                    <hr className="border-t-2 border-white/5 mt-6 md:mt-7" />
+                                    {/* <hr className="border-t-2 border-white/5 mt-6 md:mt-7" /> */}
 
-                                    <div className="mt-4 md:mt-5">
-                                        <span className="bg-gradient-to-r from-emerald-300 to-sky-400 text-transparent bg-clip-text font-semibold tracking-wide md:tracking-wider uppercase text-xs md:text-sm ">
+                                    {/* <div className="mt-4 md:mt-5">
+                                        <span className="bg-gradient-to-r from-emerald-300 to-sky-400 text-transparent bg-clip-text font-semibold tracking-wide md:tracking-wider uppercase text-xs md:text-sm">
                                             {project.techUsed.join(" • ")}
                                         </span>
-                                    </div>
+                                    </div> */}
                                 </div>
 
-                                <div className="realtive">
+                                <div className="relative">
                                     <Image
                                         src={project.image}
-                                        alt={project.title}
+                                        alt={`${project.title} preview`}
                                         className="mt-8 -mb-4 md:-mb-0 lg:mt-0 lg:absolute lg:h-full lg:w-auto lg:max-w-none"
                                     />
                                 </div>
