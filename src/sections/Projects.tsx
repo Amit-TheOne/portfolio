@@ -15,10 +15,13 @@ export const Projects = () => {
                 />
 
                 <div className="mt-14 md:mt-20 flex flex-col gap-20">
-                    {portfolioProjects.map((project) => (
+                    {portfolioProjects.map((project, projectIndex) => (
                         <Card
                             key={project.title}
-                            className="px-8 pt-8 pb-0 md:pt-10 md:px-12 lg:px-14"
+                            className="px-8 pt-8 pb-0 md:pt-10 md:px-12 lg:px-14 sticky top-16"
+                            style={{
+                                top: `calc(96px + ${projectIndex * 20}px)`,
+                            }}
                         >
                             <div className="lg:grid lg:grid-cols-2 lg:gap-16">
                                 <div className="lg:pb-10">
@@ -32,16 +35,19 @@ export const Projects = () => {
                                     </p>
 
                                     <div className="flex flex-col md:flex-row gap-5 md:gap-6 mt-7">
-                                        <a
-                                            href={project.previewLink}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                        >
-                                            <button className="bg-white text-gray-950 border border-white h-10 md:h-12 w-full md:w-auto px-8 rounded-xl font-semibold inline-flex justify-center items-center gap-3 hover:bg-gray-500 hover:text-white hover:border-gray-500 transition-all duration-[600ms]">
-                                                <span>View Project</span>
-                                                <ArrowUpRightIcon className="size-4" />
-                                            </button>
-                                        </a>
+                                        {project.previewLink && (
+                                            <a
+                                                href={project.previewLink}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                            >
+                                                <button className="bg-white text-gray-950 border border-white h-10 md:h-12 w-full md:w-auto px-8 rounded-xl font-semibold inline-flex justify-center items-center gap-3 hover:bg-gray-500 hover:text-white hover:border-gray-500 transition-all duration-[600ms]">
+                                                    <span>View Project</span>
+                                                    <ArrowUpRightIcon className="size-4" />
+                                                </button>
+                                            </a>
+                                        )}
+
                                         <a
                                             href={project.repoLink}
                                             target="_blank"
@@ -53,13 +59,6 @@ export const Projects = () => {
                                             </button>
                                         </a>
                                     </div>
-                                    {/* <hr className="border-t-2 border-white/5 mt-6 md:mt-7" /> */}
-
-                                    {/* <div className="mt-4 md:mt-5">
-                                        <span className="bg-gradient-to-r from-emerald-300 to-sky-400 text-transparent bg-clip-text font-semibold tracking-wide md:tracking-wider uppercase text-xs md:text-sm">
-                                            {project.techUsed.join(" • ")}
-                                        </span>
-                                    </div> */}
                                 </div>
 
                                 <div className="relative">
