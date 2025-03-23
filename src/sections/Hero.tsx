@@ -1,14 +1,18 @@
 import avatarImage from "@/assets/images/avatar-computer.png";
 import Image from "next/image";
-import ArrowDown from "@/assets/icons/arrow-down.svg";
 import grainImage from "@/assets/images/grain.jpg";
 import StarIcon from "@/assets/icons/star.svg";
 import SparkleIcon from "@/assets/icons/sparkle.svg";
 import { HeroOrbit } from "@/components/HeroOrbit";
+import { socialData } from "@/data/socialData";
+import Link from "next/link";
 
 export const Hero = () => {
     return (
-        <div id="hero" className="py-40 md:py-56 lg:py-60 relative z-0 overflow-x-clip">
+        <div
+            id="hero"
+            className="py-40 md:py-56 lg:py-60 relative z-0 overflow-x-clip"
+        >
             <div className="absolute inset-0 -z-30 [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_70%,transparent)]">
                 <div
                     className="absolute inset-0 opacity-5"
@@ -161,15 +165,25 @@ export const Hero = () => {
                     </div>
                 </div>
 
-                <div className="flex flex-col md:flex-row justify-center items-center mt-8 md:mt-10 gap-4">
-                    <button className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl bg-gray-700 hover:bg-gray-800 transition duration-500">
-                        <span className="font-semibold">Explore my work</span>
-                        <ArrowDown className="size-4" />
-                    </button>
-                    <button className="inline-flex items-center gap-2 border border-white bg-white text-gray-900 h-12 px-6 rounded-xl hover:bg-gray-500 hover:text-white hover:border-gray-500 transition duration-[600ms]">
-                        <span>👋</span>
-                        <span className="font-semibold">{`Let's connect`}</span>
-                    </button>
+                <div className="flex justify-center items-center mt-10 md:mt-12 gap-8 md:gap-11">
+                    {socialData.map((link) => {
+                        const Component = link.iconType;
+
+                        return (
+                            <Link
+                                key={link.title}
+                                href={link.href}
+                                target="blank"
+                                className="relative group"
+                                rel="noopener noreferrer"
+                            >
+                                <Component className="size-5 md:size-6 fill-[url(#tech-icon-gradient)] hover:fill-white/90 transition-all duration-300 ease-in-out" />
+                                <span className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 text-xs bg-gray-800 text-white px-2 py-1 rounded">
+                                    {link.title}
+                                </span>
+                            </Link>
+                        );
+                    })}
                 </div>
             </div>
         </div>
