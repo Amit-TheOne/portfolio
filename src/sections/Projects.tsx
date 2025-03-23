@@ -6,7 +6,7 @@ import { Card } from "@/components/Card";
 
 export const Projects = () => {
     return (
-        <section className="py-12 md:py-16 lg:py-24">
+        <section id="projects" className="py-12 md:py-16 lg:py-24">
             <div className="container">
                 <SectionHeader
                     eyebrow="Explore my Work"

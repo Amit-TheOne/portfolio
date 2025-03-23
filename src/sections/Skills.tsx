@@ -4,7 +4,7 @@ import { skillsData } from "@/data/skillsData";
 
 export const Skills = () => {
     return (
-        <div className="py-16 md:py-20 lg:py-24">
+        <div id="skills" className="py-16 md:py-20 lg:py-24">
             <div className="container">
                 <SectionHeader
                     eyebrow="Overview of"

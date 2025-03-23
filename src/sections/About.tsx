@@ -8,7 +8,7 @@ import { experineceData } from "@/data/experienceData";
 
 export const About = () => {
     return (
-        <div className="py-16 md:py-20 lg:py-24">
+        <div id="about" className="py-16 md:py-20 lg:py-24">
             <div className="container">
                 <SectionHeader
                     eyebrow="A Glimps Into My Life"
