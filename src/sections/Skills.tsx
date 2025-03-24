@@ -18,12 +18,12 @@ export const Skills = () => {
                     <SkillItems
                         skillItems={skillsData}
                         className=""
-                        itemsWrapperClassName="animate-move-left [animation-duration:70s]"
+                        itemsWrapperClassName="animate-move-left hover:[animation-play-state:paused] [animation-duration:70s]"
                     />
                     <SkillItems
                         skillItems={skillsData}
                         className="flex-row-reverse"
-                        itemsWrapperClassName="animate-move-right [animation-duration:60s]"
+                        itemsWrapperClassName="animate-move-right hover:[animation-play-state:paused] [animation-duration:60s]"
                     />
                 </div>
             </div>

@@ -24,7 +24,7 @@ export const SkillItems = ({
         >
             <div
                 className={twMerge(
-                    "flex flex-none py-0.5 gap-6",
+                    "flex flex-none py-3 gap-6",
                     itemsWrapperClassName
                 )}
             >
@@ -33,7 +33,7 @@ export const SkillItems = ({
                         {skillItems.map((item) => (
                             <div
                                 key={item.title}
-                                className="inline-flex items-center gap-4 px-3 py-2 outline outline-2 outline-white/10 rounded-lg bg-gray-800 relative z-0"
+                                className="inline-flex items-center gap-4 px-3 py-2 outline outline-2 outline-white/10 rounded-lg bg-gray-800 relative z-0 hover:scale-110 hover:rotate-3 transition-transform duration-300 ease-in-out"
                             >
                                 <div
                                     className="absolute inset-0 -z-10 opacity-5"
