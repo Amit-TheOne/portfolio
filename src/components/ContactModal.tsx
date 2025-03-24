@@ -52,7 +52,7 @@ export const ContactModal = ({ onClose }: { onClose: () => void }) => {
 
     return (
         <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
-            <div className="bg-gray-900 text-white px-8 pt-4 pb-8 md:px-10 md:pb-10 rounded-2xl w-4/5 md:w-full max-w-xl space-y-6 relative z-0">
+            <div className="bg-gray-900 text-white px-8 pt-4 pb-8 md:px-10 md:pb-10 rounded-2xl w-4/5 md:w-full max-w-xl space-y-6 relative z-0 overflow-hidden">
                 <div
                     className="absolute inset-0 opacity-10 -z-10"
                     style={{
