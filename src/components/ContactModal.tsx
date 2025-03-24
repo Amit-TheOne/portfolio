@@ -70,6 +70,7 @@ export const ContactModal = ({ onClose }: { onClose: () => void }) => {
                         <input
                             type="text"
                             name="fullName"
+                            placeholder="John Smith"
                             value={formData.fullName}
                             onChange={handleChange}
                             className="w-full bg-gray-700 outline-none border border-gray-500 rounded px-3 py-2 focus:border-gray-200 transition duration-150 ease-in-out"
@@ -83,6 +84,7 @@ export const ContactModal = ({ onClose }: { onClose: () => void }) => {
                         <input
                             type="email"
                             name="email"
+                            placeholder="johnsmith@mail.com"
                             value={formData.email}
                             onChange={handleChange}
                             className="w-full bg-gray-700 outline-none border border-gray-500 rounded px-3 py-2 focus:border-gray-200 transition duration-150 ease-in-out"
@@ -95,6 +97,7 @@ export const ContactModal = ({ onClose }: { onClose: () => void }) => {
                         </label>
                         <textarea
                             name="message"
+                            placeholder="Type your message here..."
                             value={formData.message}
                             onChange={handleChange}
                             className="w-full bg-gray-700 outline-none border border-gray-500 rounded px-3 py-2 focus:border-gray-200 transition duration-150 ease-in-out"
