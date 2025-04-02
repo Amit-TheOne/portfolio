@@ -21,6 +21,8 @@ export const Hero = () => {
                         backgroundImage: `url(${grainImage.src})`,
                     }}
                 />
+
+                <div className="size-[380px] md:size-[410px] absolute inset-0 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full shadow-[0_0_500px_inset] shadow-gray-950" />
                 <div className="size-[620px] hero-ring" />
                 <div className="size-[820px] hero-ring" />
                 <div className="size-[1020px] hero-ring" />
@@ -42,7 +44,7 @@ export const Hero = () => {
                         <div className="bg-green-500 size-2.5 rounded-full relative">
                             <div className="bg-green-500 absolute inset-0 rounded-full animate-ping-large" />
                         </div>
-                        <div className="text-sm font-medium">
+                        <div className="text-xs md:text-sm font-medium">
                             Looking for full-time Roles!
                         </div>
                     </div>
