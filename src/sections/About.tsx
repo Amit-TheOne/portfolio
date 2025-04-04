@@ -9,44 +9,60 @@ import { experineceData } from "@/data/experienceData";
 export const About = () => {
     return (
         <div id="about" className="py-16 md:py-20 lg:py-24">
-            <div className="container">
+            <div className="">
                 <SectionHeader
-                    eyebrow="A Glimps Into My Life"
+                    eyebrow="A Glimps of Myself"
                     title="About Me"
-                    description="Know more about my works, experiences, hobbies & my journey."
+                    description="Know more about my works, experiences & me."
                 />
 
-                <div className="mt-8 border-t border-white/80 w-28 mx-auto" />
-
-                <div className="mt-12 flex flex-col gap-8">
-                    <div className="grid grid-cols-1 gap-12 lg:gap-8 md:grid-cols-5 lg:grid-cols-3">
+                <div className="mt-14 lg:mt-24 flex flex-col gap-8 md:gap-14">
+                    <div className="grid grid-cols-1 gap-12 lg:gap-0 md:grid-cols-5 lg:grid-cols-3 px-12 md:px-14 lg:pl-8 lg:pr-12 md:max-w-5xl lg:max-w-[84rem] mx-auto">
                         <Image
                             src={avatarHi}
-                            className="size-[150px] md:size-[180px] lg:size-[280px] mx-auto my-auto md:col-span-5 lg:col-span-1 -rotate-2"
-                            alt="Person waving hand for hi"
+                            className="size-[150px] md:size-[180px] lg:size-[280px] mx-auto lg:-mx-6 my-auto md:col-span-5 lg:col-span-1 -rotate-2"
+                            alt="Person waving hand"
                         />
-                        <div className="text-white text-lg md:text-xl text-justify space-y-6 lg:ml-12 lg:mt-10 tracking-wide lg:tracking-wider md:col-span-5 lg:col-span-2">
-                            <p className="text-center">{`Hey There, I'm Amit!!`}</p>
-                            <p>
-                                A{" "}
-                                <span className="font-semibold bg-gradient-to-r from-emerald-300 to-sky-400 bg-clip-text text-transparent">
-                                    Full-Stack Developer, Software Engineer &
-                                    MERN Stack
-                                </span>
-                                {` fanatics specializes in building robust solutions
-                            and crafting seamless user experiences. I'm B.Tech Computer Science grad from Shri Shankaracharya Technical Campus - Bhilai. Beyond coding, I'm an active part of the tech
-                            community learning, sharing, and connecting with
-                            people.`}
+
+                        <div className="text-gray-300 text-base md:text-lg text-justify lg:text-left space-y-5 lg:-ml-16 tracking-wide md:col-span-5 lg:col-span-2">
+                            <p className="lg:text-xl">
+                                {`Hi, I'm Amit Dewangan!!`}
                             </p>
                             <p>
-                                {`Off-screen, I dive into Photography, exploring new
-                            places, capturing moments, or getting lost in a good
-                            music.  I'm always driven by creativity and curiosity.`}
+                                {`With `}
+                                <span className="about-content-span">
+                                    {`2+ years `}
+                                </span>
+                                {`of experience as a `}
+                                <span className="about-content-span">
+                                    {`Full Stack Developer`}
+                                </span>
+                                {`, I specialize in `}
+                                <span className="about-content-span">
+                                    {`crafting seamless digital experiences `}
+                                </span>
+                                {`using `}
+                                <span className="about-content-span">
+                                    {`MERN Stack `}
+                                </span>
+                                {`and `}
+                                <span className="about-content-span">
+                                    {`modern web technologies. `}
+                                </span>
+                                {`From interactive frontends to robust backends, I enjoy building applications that are performant, reliable, and impactful.`}
+                            </p>
+
+                            <p>
+                                {`Driven by a passion for problem-solving and innovation, I thrive on tackling challenges, pushing technological boundaries, learning new skills, and striving to write clean, maintainable, and professional code.`}
+                            </p>
+
+                            <p>
+                                {`Creativity, quality, and a dedication to excellence are the cornerstones of my work, and I'm keen to build solutions that propel success.`}
                             </p>
                         </div>
                     </div>
 
-                    <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-5 lg:grid-cols-4">
+                    <div className="container mt-8 grid grid-cols-1 gap-8 md:grid-cols-5 lg:grid-cols-4">
                         <Card className="p-0 flex flex-col md:col-span-5 lg:col-span-2 md:items-center">
                             <CardHeader
                                 title="Experiences"
