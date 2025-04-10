@@ -2,11 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-
 html {
     scroll-behavior: smooth;
-  }
-  
+}
 
 @layer base {
     .nav-item {
@@ -19,6 +17,18 @@ html {
 
     .about-content-span {
         @apply font-semibold text-white;
+    }
+
+    .hollow-ring-sm {
+        @apply size-[78px] inset-0 top-24 right-3 mx-auto shadow-[-20px_20px_25px_5px_outset];
+    }
+
+    .hollow-ring-md {
+        @apply size-[106px] top-32 right-3 mx-auto shadow-[-30px_30px_35px_8px_outset];
+    }
+
+    .hollow-ring-lg {
+        @apply size-[132px] top-40 left-12 mx-0 shadow-[-40px_40px_45px_12px_outset];
     }
 }
 

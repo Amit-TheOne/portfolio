@@ -16,16 +16,21 @@ export const About = () => {
                     description="Know more about my works, experiences & me."
                 />
 
-                <div className="mt-14 lg:mt-24 flex flex-col gap-8 md:gap-14">
-                    <div className="grid grid-cols-1 gap-12 lg:gap-0 md:grid-cols-5 lg:grid-cols-3 px-12 md:px-14 lg:pl-8 lg:pr-12 md:max-w-5xl lg:max-w-[84rem] mx-auto">
-                        <Image
-                            src={avatarHi}
-                            className="size-[150px] md:size-[180px] lg:size-[280px] mx-auto lg:-mx-6 my-auto md:col-span-5 lg:col-span-1 -rotate-2"
-                            alt="Person waving hand"
-                        />
+                <div className="mt-10 md:mt-14 lg:mt-28 flex flex-col gap-8 md:gap-14">
+                    <div className="grid grid-cols-1 gap-14 lg:gap-0 md:grid-cols-5 lg:grid-cols-3 px-12 md:px-14 md:max-w-5xl lg:max-w-[84rem] mx-auto">
+                        <div className="relative md:col-span-5 lg:col-span-1">
+                                <div
+                                    className="absolute rounded-full skew-x-[30deg] skew-y-[10deg] -rotate-[37deg] border-4 border-gray-300/70  hollow-ring-sm md:hollow-ring-md lg:hollow-ring-lg shadow-gray-400 md:shadow-gray-400 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-neutral-800  to-black"
+                                />
+                            <Image
+                                src={avatarHi}
+                                className="size-[150px] md:size-[200px] lg:size-[260px] mx-auto lg:-mx-2 my-auto lg:-my-2 md:col-span-5 lg:col-span-1 -rotate-2"
+                                alt="Person waving hand"
+                            />
+                        </div>
 
-                        <div className="text-gray-300 text-base md:text-lg text-justify lg:text-left space-y-5 lg:-ml-16 tracking-wide md:col-span-5 lg:col-span-2">
-                            <p className="lg:text-xl">
+                        <div className="mt-8 md:mt-16 lg:mt-0 text-gray-300 text-base md:text-lg text-justify lg:text-left space-y-5 lg:-ml-8 tracking-wide md:col-span-5 lg:col-span-2">
+                            <p className="text-center lg:text-left text-lg md:text-xl">
                                 {`Hi, I'm Amit Dewangan!!`}
                             </p>
                             <p>
