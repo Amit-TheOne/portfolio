@@ -16,8 +16,8 @@ export const About = () => {
                     description="Know more about my works, experiences & me."
                 />
 
-                <div className="mt-10 md:mt-14 lg:mt-28 flex flex-col gap-8 md:gap-14">
-                    <div className="grid grid-cols-1 gap-14 lg:gap-0 md:grid-cols-5 lg:grid-cols-3 px-12 md:px-14 md:max-w-5xl lg:max-w-[84rem] mx-auto">
+                <div className="mt-10 md:mt-14 lg:mt-20 flex flex-col gap-8 md:gap-14">
+                    <div className="grid grid-cols-1 gap-14 lg:gap-0 md:grid-cols-5 lg:grid-cols-3 px-12 md:px-14 md:max-w-[62rem] lg:max-w-[84rem] mx-auto">
                         <div className="relative md:col-span-5 lg:col-span-1">
                                 <div
                                     className="absolute rounded-full skew-x-[30deg] skew-y-[10deg] -rotate-[37deg] border-4 border-gray-300/70  hollow-ring-sm md:hollow-ring-md lg:hollow-ring-lg shadow-gray-400 md:shadow-gray-400 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-neutral-800  to-black"
@@ -67,17 +67,18 @@ export const About = () => {
                         </div>
                     </div>
 
-                    <div className="container mt-8 grid grid-cols-1 gap-8 md:grid-cols-5 lg:grid-cols-4">
-                        <Card className="p-0 flex flex-col md:col-span-5 lg:col-span-2 md:items-center">
+                    <div className="mt-8 mx-auto w-[80%] md:w-[80%] md:max-w-2xl lg:w-[83%] lg:max-w-5xl grid grid-cols-1 gap-8 md:grid-cols-5 lg:grid-cols-4">
+                        <Card className="p-0 flex flex-col md:col-span-5 lg:col-span-2 items-center">
                             <CardHeader
                                 title="Experiences"
-                                className="px-6 py-6 tracking-wider"
+                                className="tracking-wider"
                             />
-                            <div className="px-10 md:px-20 py-8 -mt-10 lg:-mt-6 text-white text-base md:text-lg space-y-3 font-semibold">
+                            <div className="flex flex-col py-8 -mt-10 lg:-mt-6 text-white text-base md:text-lg space-y-3 font-semibold">
                                 {experineceData.map((exp) => (
-                                    <p key={exp.role}>
-                                        <span>{exp.experience} - </span>
-                                        <span>{exp.role}</span>
+                                    <p key={exp.role} className="space-x-4">
+                                        <span>{exp.experience}</span>
+                                        <span>{"->"}</span>
+                                        <span> {exp.role}</span>
                                     </p>
                                 ))}
                             </div>
@@ -87,7 +88,7 @@ export const About = () => {
                             <CardHeader
                                 title="Beyond the code"
                                 description="Drag to play around."
-                                className="px-6 py-6 md:items-center tracking-wider"
+                                className="items-center tracking-wider"
                             />
                             <BeyondCode />
                         </Card>
