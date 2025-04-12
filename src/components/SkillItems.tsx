@@ -42,7 +42,7 @@ export const SkillItems = ({
                                     }}
                                 />
                                 <TechIcon component={item.iconType} />
-                                <span className="font-semibold">
+                                <span className="md:text-lg font-medium">
                                     {item.title}
                                 </span>
                             </div>

@@ -5,13 +5,11 @@ import { skillsData } from "@/data/skillsData";
 export const Skills = () => {
     return (
         <div id="skills" className="py-16 md:py-20 lg:py-24">
-            <div className="container">
-                <SectionHeader
-                    eyebrow="Overview of"
-                    title="My Skills"
-                    description="Explore the technologies and tools I use to craft exceptional products."
-                />
-            </div>
+            <SectionHeader
+                eyebrow="Toolset Overview"
+                title="Skills"
+                description="The technologies and tools I use to build and ship applications."
+            />
 
             <div className="mt-14 md:mt-20 w-[87%] md:w-[85%] lg:max-w-7xl mx-auto">
                 <div className="flex flex-col gap-14 overflow-x-clip px-3">
