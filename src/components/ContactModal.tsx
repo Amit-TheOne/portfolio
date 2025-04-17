@@ -1,9 +1,10 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import grainImage from "@/assets/images/grain.jpg";
 
 export const ContactModal = ({ onClose }: { onClose: () => void }) => {
+    const conatinerRef = useRef<HTMLDivElement>(null);
     const [formData, setFormData] = useState({
         fullName: "",
         email: "",
@@ -44,15 +45,27 @@ export const ContactModal = ({ onClose }: { onClose: () => void }) => {
             }
         };
 
+        const handleClick = (e: MouseEvent) => {
+            if (conatinerRef.current && e.target === conatinerRef.current) {
+                onClose();
+            }
+        };
+
         window.addEventListener("keydown", handleKeyDown);
+        window.addEventListener("click", handleClick);
+
         return () => {
             window.removeEventListener("keydown", handleKeyDown);
+            window.removeEventListener("click", handleClick);
         };
     }, [onClose]);
 
     return (
-        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
-            <div className="bg-gray-900 text-white px-8 pt-4 pb-8 md:px-10 md:pb-10 rounded-2xl w-4/5 md:w-full max-w-xl space-y-6 relative z-0 overflow-hidden">
+        <div
+            ref={conatinerRef}
+            className="fixed inset-0 bg-black/60 flex items-center justify-center z-50"
+        >
+            <div className="bg-gray-900 outline outline-1 outline-gray-200 text-white px-8 pt-4 pb-8 md:px-10 md:pb-10 rounded-2xl h- w-4/5 md:w-full max-w-xl space-y-6 relative z-0 overflow-hidden">
                 <div
                     className="absolute inset-0 opacity-10 -z-10"
                     style={{
@@ -100,7 +113,7 @@ export const ContactModal = ({ onClose }: { onClose: () => void }) => {
                             placeholder="Type your message here..."
                             value={formData.message}
                             onChange={handleChange}
-                            className="w-full bg-gray-700 outline-none border border-gray-500 rounded px-3 py-2 focus:border-gray-200 transition duration-150 ease-in-out"
+                            className="w-full bg-gray-700 outline-none border border-gray-500 rounded px-3 py-2 focus:border-gray-200 transition duration-150 ease-in-out resize-none"
                             rows={6}
                             required
                             minLength={10}
