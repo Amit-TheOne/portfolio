@@ -11,7 +11,7 @@ export const Hero = () => {
 
     return (
         <div
-            id="hero"
+            id="home"
             className="py-56 md:py-56 lg:py-60 relative z-0 overflow-x-clip"
         >
             <div className="absolute inset-0 -z-30 [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_70%,transparent)]">
