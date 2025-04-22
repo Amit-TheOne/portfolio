@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import grainImage from "@/assets/images/grain.jpg";
 import emailjs from "@emailjs/browser";
 
@@ -22,6 +22,7 @@ export const ContactModal = ({ onClose }: { onClose: () => void }) => {
     const [sending, setSending] = useState(false);
     const [isSuccess, setIsSuccess] = useState(false);
     const [error, setError] = useState<string | null>(null);
+    const [isVisible, setIsVisible] = useState(false);
 
     const [formData, setFormData] = useState(formFieldsData);
 
@@ -54,6 +55,36 @@ export const ContactModal = ({ onClose }: { onClose: () => void }) => {
             }
         }, 3000);
     };
+
+    const handleClose = useCallback(() => {
+        setIsVisible(false);
+        setTimeout(onClose, 300);
+    }, [onClose]);
+
+    useEffect(() => {
+        setIsVisible(true);
+
+        const handleKeyDown = (e: KeyboardEvent) => {
+            if (e.key === "Escape") {
+                handleClose();
+            }
+        };
+
+        const handleClickOutside = (e: MouseEvent) => {
+            if (containerRef.current && e.target === containerRef.current) {
+                handleClose();
+            }
+        };
+
+        window.addEventListener("keydown", handleKeyDown);
+        window.addEventListener("click", handleClickOutside);
+
+        return () => {
+            setIsVisible(false);
+            window.removeEventListener("keydown", handleKeyDown);
+            window.removeEventListener("click", handleClickOutside);
+        };
+    }, [handleClose]);
 
     const sendEmail = async (e: React.FormEvent) => {
         e.preventDefault();
@@ -108,34 +139,18 @@ export const ContactModal = ({ onClose }: { onClose: () => void }) => {
         }
     };
 
-    useEffect(() => {
-        const handleKeyDown = (e: KeyboardEvent) => {
-            if (e.key === "Escape") {
-                onClose();
-            }
-        };
-
-        const handleClickOutside = (e: MouseEvent) => {
-            if (containerRef.current && e.target === containerRef.current) {
-                onClose();
-            }
-        };
-
-        window.addEventListener("keydown", handleKeyDown);
-        window.addEventListener("click", handleClickOutside);
-
-        return () => {
-            window.removeEventListener("keydown", handleKeyDown);
-            window.removeEventListener("click", handleClickOutside);
-        };
-    }, [onClose]);
-
     return (
         <div
             ref={containerRef}
-            className="fixed inset-0 bg-black/60 flex items-center justify-center z-50"
+            className={`fixed inset-0 bg-black/60 flex items-center justify-center z-50 transition-opacity duration-300 ${
+                isVisible ? "opacity-100" : "opacity-0"
+            }`}
         >
-            <div className="bg-gray-900 outline outline-1 outline-gray-200 text-white px-8 md:px-10 rounded-2xl w-4/5 md:w-full max-w-xl relative z-0 overflow-hidden">
+            <div
+                className={`bg-gray-900 outline outline-1 outline-gray-200 text-white px-8 md:px-10 rounded-2xl w-4/5 md:w-full max-w-xl relative z-0 overflow-hidden transition-transform duration-300 ${
+                    isVisible ? "scale-100" : "scale-90"
+                }`}
+            >
                 <div
                     className="absolute inset-0 opacity-10 -z-10"
                     style={{
@@ -217,7 +232,7 @@ export const ContactModal = ({ onClose }: { onClose: () => void }) => {
                         <div className="flex gap-6 mt-6 md:mt-8 mb-8 md:mb-10">
                             <button
                                 type="button"
-                                onClick={onClose}
+                                onClick={handleClose}
                                 className="text-white bg-black px-6 h-12 rounded-xl font-semibold w-max border border-gray-500 hover:bg-gray-800 hover:border-white/80 transition-all duration-[600ms]"
                             >
                                 Cancel
