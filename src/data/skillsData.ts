@@ -1,5 +1,3 @@
-import HTMLIcon from "@/assets/icons/tech-icons/html5.svg";
-import CssIcon from "@/assets/icons/tech-icons/css3.svg";
 import JavascriptIcon from "@/assets/icons/tech-icons/javascript.svg";
 import ReactIcon from "@/assets/icons/tech-icons/react.svg";
 import ChromeIcon from "@/assets/icons/tech-icons/chrome.svg";
@@ -26,23 +24,16 @@ import DockerIcon from "@/assets/icons/tech-icons/docker.svg";
 import TypescriptIcon from "@/assets/icons/tech-icons/typescript.svg";
 import TailwindIcon from "@/assets/icons/tech-icons/tailwind.svg";
 import FirebaseIcon from "@/assets/icons/tech-icons/firebase.svg";
-
+import RestApiIcon from "@/assets/icons/tech-icons/rest-api.svg";
+import DeploymentIcon from "@/assets/icons/tech-icons/deployment.svg";
 
 export const skillsData = [
-    {
-        title: "HTML5",
-        iconType: HTMLIcon,
-    },
-    {
-        title: "CSS3",
-        iconType: CssIcon,
-    },
     {
         title: "JavaScript",
         iconType: JavascriptIcon,
     },
     {
-        title: "React",
+        title: "React.js",
         iconType: ReactIcon,
     },
     {
@@ -54,20 +45,20 @@ export const skillsData = [
         iconType: TailwindIcon,
     },
     {
-        title: "Node",
+        title: "Node.js",
         iconType: NodeIcon,
     },
     {
-        title: "Express",
+        title: "Express.js",
+        iconType: ExpressIcon,
+    },
+    {
+        title: "Next.js",
         iconType: ExpressIcon,
     },
     {
         title: "Bootstrap",
         iconType: BootstrapIcon,
-    },
-    {
-        title: "Context API",
-        iconType: ReactIcon,
     },
     {
         title: "Redux",
@@ -139,11 +130,11 @@ export const skillsData = [
     },
     {
         title: "Rest API",
-        iconType: ReactIcon,
+        iconType: RestApiIcon,
     },
     {
         title: "Deployment",
-        iconType: ReactIcon,
+        iconType: DeploymentIcon,
     },
     {
         title: "Docker",
