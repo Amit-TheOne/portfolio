@@ -13,7 +13,7 @@ export const Projects = () => {
                 description="Bringing ideas to life through thoughtful design and code."
             />
 
-            <div className="mt-14 md:mt-20 mx-auto w-[80%] max-w-xl md:w-[85%] md:max-w-3xl lg:w-[85%] lg:max-w-[62rem] flex flex-col gap-20">
+            <div className="mt-14 md:mt-20 mx-auto w-[80%] max-w-xl md:w-[85%] md:max-w-3xl lg:w-[85%] lg:max-w-[62rem] flex flex-col gap-16 lg:gap-14">
                 {portfolioProjects.map((project, projectIndex) => (
                     <Card
                         key={project.title}
@@ -60,11 +60,11 @@ export const Projects = () => {
                                 </div>
                             </div>
 
-                            <div className="relative">
+                            <div className="lg:content-center lg:-mt-10 justify-items-center lg:justify-items-start">
                                 <Image
                                     src={project.image}
                                     alt={`${project.title} preview`}
-                                    className="mt-8 -mb-4 md:-mb-0 lg:mt-0 lg:absolute lg:h-full lg:w-auto lg:max-w-none"
+                                    className="mt-10 mb-3 md:mt-12 md:mb-5 lg:my-0 h-auto w-auto lg:max-w-md rounded-xl shadow-xl shadow-gray-500/60 transition-transform duration-300 hover:scale-105 lg:hover:scale-110 hover:shadow-gray-400/60 ring-2 ring-gray-500/50"
                                 />
                             </div>
                         </div>
