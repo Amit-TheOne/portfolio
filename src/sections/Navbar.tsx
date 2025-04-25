@@ -36,8 +36,8 @@ export const Navbar = () => {
 
     return (
         <div className="flex justify-center items-center fixed top-3 w-full z-10 px-5 md:px-0">
-            <div className="w-full md:w-[90%] max-w-2xl md:max-w-5xl mx-auto flex items-center justify-between px-6 py-2 pl-8 rounded-2xl border border-white/15 bg-white/5 backdrop-blur">
-            
+            <div className="w-full md:w-[90%] max-w-2xl md:max-w-5xl mx-auto flex items-center justify-between px-6 py-2 pl-8 md:pr-4 lg:pr-6 rounded-2xl border border-white/15 bg-white/5 backdrop-blur">
+
                 {/* Logo Section */}
                 <div className="inline-flex justify-center items-baseline gap-3 md:gap-3">
                     <span className="text-white font-serif text-xl md:text-2xl font-semibold tracking-wide cursor-pointer">
