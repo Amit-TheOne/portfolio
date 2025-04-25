@@ -15,8 +15,8 @@ const calistoga = Calistoga({
 });
 
 export const metadata: Metadata = {
-  title: "Amit's Portfolio",
-  description: "A portfolio website for Amit Dewnagan, a Full Stack software engineer from India.",
+  title: "Amit Dewangan's Portfolio",
+  description: "Portfolio website for Amit Dewangan, a Full Stack Developer & Software Engineer from India.",
 };
 
 export default function RootLayout({
