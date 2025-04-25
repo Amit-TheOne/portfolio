@@ -1,20 +1,43 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import NavbarMenuIcon from "@/assets/icons/navbar-menu.svg";
 import CloseMenu from "@/assets/icons/close-menu.svg";
 
 export const Navbar = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const navMenuRef = useRef<HTMLDivElement>(null);
 
     const toggleMobileMenu = () => {
         setIsMobileMenuOpen((prev) => !prev);
     };
 
+    const handleClose = () => {
+        setIsMobileMenuOpen(false);
+    };
+
+    useEffect(() => {
+        const handleClickOutside = (e: MouseEvent) => {
+            console.log(navMenuRef.current);
+            if (
+                navMenuRef.current && !navMenuRef.current.contains(e.target as Node)
+            ) {
+                handleClose();
+            }
+        };
+
+        document.addEventListener("mousedown", handleClickOutside);
+
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, []);
+
     return (
         <div className="flex justify-center items-center fixed top-3 w-full z-10 px-5 md:px-0">
             <div className="w-full md:w-[90%] max-w-2xl md:max-w-5xl mx-auto flex items-center justify-between px-6 py-2 pl-8 rounded-2xl border border-white/15 bg-white/5 backdrop-blur">
+            
                 {/* Logo Section */}
                 <div className="inline-flex justify-center items-baseline gap-3 md:gap-3">
                     <span className="text-white font-serif text-xl md:text-2xl font-semibold tracking-wide cursor-pointer">
@@ -59,7 +82,10 @@ export const Navbar = () => {
                         </button>
 
                         {isMobileMenuOpen && (
-                            <div className="absolute top-full -right-11 mt-2 bg-gray-800 text-white rounded-lg shadow-lg p-4">
+                            <div
+                                ref={navMenuRef}
+                                className="absolute top-full -right-11 mt-2 bg-gray-800 text-white rounded-lg shadow-lg p-4"
+                            >
                                 <nav className="flex flex-col justify-center items-center gap-4 px-5 py-2">
                                     <Link
                                         href="#home"
