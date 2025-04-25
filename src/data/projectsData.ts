@@ -1,10 +1,10 @@
-import evogymImage from "@/assets/project-images/evogym.png";
-import homzyImage from "@/assets/project-images/homzy.png";
-import inotesImage from "@/assets/project-images/inotes.png";
-import zenfiImage from "@/assets/project-images/zenfi.png";
-import incomeExpenseTrackerImage from "@/assets/project-images/income-expense-tracker.png";
-import dataeyeImage from "@/assets/project-images/dataeye.png";
-import iotDMSImage from "@/assets/project-images/IoT-DMS.png";
+import evogymImage from "@/assets/images/project-images/evogym.png";
+import homzyImage from "@/assets/images/project-images/homzy.png";
+import inotesImage from "@/assets/images/project-images/inotes.png";
+import zenfiImage from "@/assets/images/project-images/zenfi.png";
+import incomeExpenseTrackerImage from "@/assets/images/project-images/income-expense-tracker.png";
+import dataeyeImage from "@/assets/images/project-images/dataeye.png";
+import iotDMSImage from "@/assets/images/project-images/IoT-DMS.png";
 
 export const portfolioProjects = [
     {
