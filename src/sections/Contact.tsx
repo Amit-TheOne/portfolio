@@ -1,5 +1,4 @@
 import { SectionHeader } from "@/components/SectionHeader";
-import grainImage from "@/assets/images/grain.jpg";
 import { ContactButton } from "@/components/ContactButton";
 import { socialData } from "@/data/socialData";
 import Link from "next/link";
@@ -40,7 +39,7 @@ export const Contact = () => {
                         <div
                             className="absolute inset-0 opacity-10 -z-10"
                             style={{
-                                backgroundImage: `url(${grainImage.src})`,
+                                backgroundImage: "url(/grain.jpg)",
                             }}
                         />
                         <div className="flex flex-col md:flex-row gap-8 md:gap-16 lg:gap-24 items-center">

@@ -2,7 +2,6 @@ import { SectionHeader } from "@/components/SectionHeader";
 import { Card } from "@/components/Card";
 import { CardHeader } from "@/components/CardHeader";
 import Image from "next/image";
-import avatarHi from "@/assets/images/avatar-hi.png";
 import { BeyondCode } from "@/components/BeyondCode";
 import { experineceData } from "@/data/experienceData";
 
@@ -20,9 +19,12 @@ export const About = () => {
                     <div className="relative md:col-span-5 lg:col-span-1">
                         <div className="absolute rounded-full skew-x-[30deg] skew-y-[10deg] -rotate-[37deg] border-4 border-gray-300/70  hollow-ring-sm md:hollow-ring-md lg:hollow-ring-lg shadow-gray-400 md:shadow-gray-400 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-neutral-800  to-black" />
                         <Image
-                            src={avatarHi}
-                            className="size-[150px] md:size-[200px] lg:size-[260px] mx-auto lg:-mx-2 my-auto lg:-my-2 md:col-span-5 lg:col-span-1 -rotate-2"
+                            src="/avatar-hi.png"
                             alt="Person waving hand"
+                            className="size-[150px] md:size-[200px] lg:size-[260px] mx-auto lg:-mx-2 my-auto lg:-my-2 md:col-span-5 lg:col-span-1 -rotate-2"
+                            width={800}
+                            height={800}
+                            priority
                         />
                     </div>
 

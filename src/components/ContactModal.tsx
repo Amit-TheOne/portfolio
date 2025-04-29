@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect, useRef, useCallback } from "react";
-import grainImage from "@/assets/images/grain.jpg";
 import emailjs from "@emailjs/browser";
 
 interface FormData {
@@ -154,7 +153,7 @@ export const ContactModal = ({ onClose }: { onClose: () => void }) => {
                 <div
                     className="absolute inset-0 opacity-10 -z-10"
                     style={{
-                        backgroundImage: `url(${grainImage.src})`,
+                        backgroundImage: "url(/grain.jpg)",
                     }}
                 />
                 <div className="flex flex-col gap-2">

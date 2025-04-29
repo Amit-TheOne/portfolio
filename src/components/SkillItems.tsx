@@ -1,6 +1,5 @@
 import { twMerge } from "tailwind-merge";
 import { TechIcon } from "./TechIcon";
-import grainImage from "@/assets/images/grain.jpg";
 import { Fragment } from "react";
 
 export const SkillItems = ({
@@ -38,7 +37,7 @@ export const SkillItems = ({
                                 <div
                                     className="absolute inset-0 -z-10 opacity-5"
                                     style={{
-                                        backgroundImage: `url(${grainImage.src})`,
+                                        backgroundImage: "url(/grain.jpg)",
                                     }}
                                 />
                                 <TechIcon component={item.iconType} />

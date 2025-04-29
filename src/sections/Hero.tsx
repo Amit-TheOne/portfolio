@@ -1,6 +1,4 @@
-import avatarImage from "@/assets/images/avatar-computer.png";
 import Image from "next/image";
-import grainImage from "@/assets/images/grain.jpg";
 import { socialData } from "@/data/socialData";
 import Link from "next/link";
 import { TypeText } from "@/components/TypeText";
@@ -18,7 +16,7 @@ export const Hero = () => {
                 <div
                     className="absolute inset-0 opacity-5"
                     style={{
-                        backgroundImage: `url(${grainImage.src})`,
+                        backgroundImage: "url(/grain.jpg)",
                     }}
                 />
 
@@ -35,10 +33,12 @@ export const Hero = () => {
             <div className="w-full md:container">
                 <div className="flex flex-col items-center -mt-6 md:-mt-8 lg:-mt-10 ">
                     <Image
-                        src={avatarImage}
-                        className="size-[100px] md:size-[120px]"
-                        priority
+                        src="/avatar-computer.png"
                         alt="Person peeking from behind the laptop"
+                        className="size-[100px] md:size-[120px]"
+                        width={500}
+                        height={500}
+                        priority
                     />
                     <div className="bg-gray-950 border border-gray-800 px-4 py-1.5 inline-flex rounded-lg items-center gap-4">
                         <div className="bg-green-500 size-2.5 rounded-full relative">
