@@ -19,7 +19,6 @@ export const Navbar = () => {
 
     useEffect(() => {
         const handleClickOutside = (e: MouseEvent) => {
-            console.log(navMenuRef.current);
             if (
                 navMenuRef.current && !navMenuRef.current.contains(e.target as Node)
             ) {
