@@ -65,6 +65,8 @@ export const Projects = () => {
                                     src={project.image}
                                     alt={`${project.title} preview`}
                                     className="mt-10 mb-3 md:mt-12 md:mb-5 lg:my-0 h-auto w-auto lg:max-w-md rounded-xl shadow-xl shadow-gray-500/60 transition-transform duration-300 hover:scale-105 lg:hover:scale-110 hover:shadow-gray-400/60 ring-2 ring-gray-500/50"
+                                    width={1000}
+                                    height={1000}
                                 />
                             </div>
                         </div>
