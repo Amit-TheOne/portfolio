@@ -26,6 +26,7 @@ import TailwindIcon from "@/assets/icons/tech-icons/tailwind.svg";
 import FirebaseIcon from "@/assets/icons/tech-icons/firebase.svg";
 import RestApiIcon from "@/assets/icons/tech-icons/rest-api.svg";
 import DeploymentIcon from "@/assets/icons/tech-icons/deployment.svg";
+import NextJsIcon from "@/assets/icons/tech-icons/nextjs.svg";
 
 export const skillsData = [
     {
@@ -54,7 +55,7 @@ export const skillsData = [
     },
     {
         title: "Next.js",
-        iconType: ExpressIcon,
+        iconType: NextJsIcon,
     },
     {
         title: "Bootstrap",
