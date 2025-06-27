@@ -35,7 +35,7 @@ export const Navbar = () => {
 
     return (
         <div className="flex justify-center items-center fixed top-3 w-full z-10 px-5 md:px-0">
-            <div className="w-full md:w-[90%] max-w-2xl md:max-w-5xl mx-auto flex items-center justify-between px-6 py-2 pl-8 md:pr-4 lg:pr-6 rounded-2xl border border-white/15 bg-white/5 backdrop-blur">
+            <div className="w-full md:w-[95%] max-w-2xl md:max-w-5xl mx-auto flex items-center justify-between px-6 py-2 pl-8 md:pl-5 lg:pl-8 md:pr-2 lg:pr-6 rounded-2xl border border-white/15 bg-white/5 backdrop-blur">
 
                 {/* Logo Section */}
                 <div className="inline-flex justify-center items-baseline gap-3 md:gap-3">
@@ -48,7 +48,7 @@ export const Navbar = () => {
                 <div className="flex items-center justify-end w-auto">
                     {/* Desktop Navigation */}
                     <div className="hidden md:flex">
-                        <nav className="flex gap-1 p-0.5">
+                        <nav className="flex gap-1 md:gap-[2px] lg:gap-1 p-0.5">
                             <Link href="#home" className="nav-item">
                                 Home
                             </Link>
@@ -61,6 +61,9 @@ export const Navbar = () => {
                             <Link href="#skills" className="nav-item">
                                 Skills
                             </Link>
+                            <Link href="#blogs" className="nav-item">
+                                Blogs
+                            </Link>                            
                             <Link href="#contact" className="nav-item">
                                 Contact
                             </Link>
@@ -121,6 +124,15 @@ export const Navbar = () => {
                                         }
                                     >
                                         Skills
+                                    </Link>
+                                    <Link
+                                        href="#blogs"
+                                        className="nav-item"
+                                        onClick={() =>
+                                            setIsMobileMenuOpen(false)
+                                        }
+                                    >
+                                        Blogs
                                     </Link>
                                     <Link
                                         href="#contact"
